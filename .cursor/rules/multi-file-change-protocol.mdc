@@ -1,0 +1,115 @@
+---
+description: Protocol for safe multi-file changes in Jekyll site
+globs: ["_config.yml", "_data/**", "_products/**", "docs/**", "**/*.md"]
+alwaysApply: false
+---
+
+# Multi-file Change Protocol
+
+## Jekyll-Specific Considerations
+
+### Adding a New Collection
+If you add a new collection:
+1. Create collection directory (e.g., `_collection-name/`)
+2. Update `_config.yml` with collection definition:
+   ```yaml
+   collections:
+     collection-name:
+       output: true
+       permalink: /collection-name/:path/
+   ```
+3. Add defaults in `_config.yml` for collection items
+4. Create initial collection item(s) with proper frontmatter
+5. Update `.cursor/rules/project-structure.mdc` if structure changes significantly
+
+### Modifying Collections
+If you modify collection structure:
+1. Update `_config.yml` if permalink or output settings change
+2. Update collection item frontmatter if required fields change
+3. Consider impact on existing collection items
+4. Test locally with `bundle exec jekyll serve`
+
+### Adding/Modifying Data Files
+If you add or modify `_data/` files:
+1. Create/update YAML file in `_data/` directory
+2. Consider impact on all pages/templates using that data
+3. Update templates if data structure changes
+4. Test locally to verify data is accessible
+
+### Modifying Navigation
+If you modify navigation:
+1. Update `_data/navigation.yml`
+2. Verify navigation structure matches theme expectations
+3. Test navigation rendering locally
+4. Check all pages are accessible via navigation
+
+### Configuration Changes
+If you modify `_config.yml`:
+1. Understand site-wide impact (affects all pages)
+2. Test locally after changes
+3. Verify GitHub Pages compatibility
+4. Document significant changes
+
+## General Protocol
+
+1. **Propose Plan**: For a requested change, output a plan first:
+   - Files to touch (≤ 4)
+   - For each file: sections to edit and expected post-conditions
+2. **Apply in steps**: Implement one step at a time and show diffs per file with path headers:
+   ```
+   // FILE: path/to/file.md (or .yml)
+   <diff or new lines>
+   ```
+3. **Stop on scope creep**: If more files are needed, pause and request approval.
+4. **After change**: Test locally with `bundle exec jekyll serve`, note any migration or doc updates.
+
+## Jekyll-Specific File Updates
+
+### Collection Changes
+- **New collection**: Create `_collection-name/` directory + update `_config.yml` + create initial items
+- **Collection config**: Update `_config.yml` collections section + defaults section
+- **Collection items**: Add/modify markdown files in collection directory
+
+### Data File Changes
+- **New data file**: Create YAML file in `_data/` + update templates using it
+- **Data structure changes**: Update data file + all templates accessing that data
+- **Navigation**: Update `_data/navigation.yml` + verify theme compatibility
+
+### Configuration Changes
+- **`_config.yml`**: Changes affect entire site; test thoroughly
+- **Theme settings**: Update `_config.yml` theme section
+- **Collection config**: Update collections and defaults sections together
+
+### Content Changes
+- **Pages**: Edit markdown files (may affect navigation if permalink changes)
+- **Frontmatter**: Ensure consistent frontmatter across similar pages
+- **Assets**: Add images/assets + update references in content
+
+## Testing Requirements
+
+- **Local testing**: Always run `bundle exec jekyll serve` after multi-file changes
+- **Build verification**: Ensure `bundle exec jekyll build` succeeds
+- **Link checking**: Verify internal links still work
+- **Navigation**: Test navigation structure
+- **Data access**: Verify data files are accessible in templates
+
+## Common Multi-File Scenarios
+
+### Adding a New Product
+1. Create `_products/product-name.md` with frontmatter
+2. Add product image to `assets/images/` (if needed)
+3. Update product listing page (if exists)
+4. Test product page renders correctly
+
+### Adding a New Documentation Page
+1. Create `docs/page-name.md` with frontmatter
+2. Update `_data/navigation.yml` if adding to navigation
+3. Update any index/listing pages that reference docs
+4. Test page renders and is accessible
+
+### Modifying Site Structure
+1. Update `_config.yml` with new structure
+2. Move/rename files as needed
+3. Update navigation in `_data/navigation.yml`
+4. Update any hardcoded links in content
+5. Test all pages still accessible

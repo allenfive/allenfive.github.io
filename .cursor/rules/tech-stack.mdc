@@ -1,0 +1,136 @@
+---
+description: Jekyll static site generator tech stack and platform
+globs: ["_config.yml", "Gemfile", "**/*.md", ".github/workflows/**"]
+alwaysApply: false
+---
+
+# Jekyll Tech Stack
+
+## Primary Platform
+- **Jekyll** (static site generator)
+- **GitHub Pages** (hosting and deployment)
+- **Minimal Mistakes** (Jekyll theme)
+
+## Core Technologies
+
+### Jekyll
+- **Purpose**: Static site generator that converts Markdown and Liquid templates to HTML
+- **Version**: Managed via `github-pages` gem (ensures GitHub Pages compatibility)
+- **Configuration**: `_config.yml`
+- **Build**: `bundle exec jekyll build` or `bundle exec jekyll serve`
+
+### Minimal Mistakes Theme
+- **Purpose**: Jekyll theme providing layouts, includes, and styling
+- **Installation**: Via gem (`minimal-mistakes-jekyll` in Gemfile)
+- **Customization**: Override theme files in `_includes/`, `_layouts/`, or `assets/`
+- **Documentation**: https://mmistakes.github.io/minimal-mistakes/
+- **Configuration**: Theme settings in `_config.yml` (e.g., `minimal_mistakes_skin`)
+
+### Ruby
+- **Version**: 3.3.x (specified in `.ruby-version`)
+- **Purpose**: Runtime for Jekyll and gems
+- **Management**: rbenv recommended for local development
+- **CI**: GitHub Actions uses `ruby/setup-ruby@v1` with version 3.3
+
+### Bundler
+- **Purpose**: Ruby dependency management
+- **Files**: `Gemfile` (dependencies), `Gemfile.lock` (locked versions)
+- **Commands**: `bundle install`, `bundle exec jekyll serve`
+
+## Jekyll Features Used
+
+### Collections
+- **Products collection**: `_products/` directory
+- **Configuration**: Defined in `_config.yml`
+- **Output**: Generates pages at `/products/:path/`
+- **Frontmatter**: Each file has frontmatter with layout, title, etc.
+
+### Data Files
+- **Location**: `_data/` directory
+- **Format**: YAML (preferred), JSON, or CSV
+- **Access**: `site.data.filename.key` in Liquid templates
+- **Example**: `_data/navigation.yml` → `site.data.navigation.main`
+
+### Liquid Templates
+- **Purpose**: Template engine for dynamic content
+- **Usage**: In layouts, includes, and markdown files
+- **Data access**: `site.data`, `page`, `site`, etc.
+- **Filters**: Built-in Jekyll filters plus theme-specific filters
+
+### Frontmatter
+- **Purpose**: Page metadata in YAML format
+- **Required fields**: `layout`, `title`, `permalink` (for pages)
+- **Common fields**: `excerpt`, `header`, `classes`
+- **Format**: YAML between `---` delimiters at top of file
+
+## Plugins
+
+### jekyll-include-cache
+- **Purpose**: Caches included files for performance
+- **Configuration**: Listed in `_config.yml` plugins section
+- **GitHub Pages**: Compatible (included in `github-pages` gem)
+
+## GitHub Pages Integration
+
+### Deployment
+- **Method**: GitHub Actions workflow (`.github/workflows/pages.yml`)
+- **Trigger**: Push to `main` branch
+- **Process**: 
+  1. Install Ruby & dependencies
+  2. Build Jekyll site (`bundle exec jekyll build`)
+  3. Deploy `_site/` directory to GitHub Pages
+- **Settings**: Repository must be configured with "GitHub Actions" as Pages source
+
+### Compatibility
+- **Gems**: Only gems compatible with GitHub Pages can be used
+- **Plugins**: Only whitelisted plugins work on GitHub Pages
+- **Theme**: Remote themes or theme gems work (we use theme gem)
+
+## Build and Development
+
+### Local Development
+```bash
+bundle install              # Install dependencies
+bundle exec jekyll serve    # Run local server (http://127.0.0.1:4000)
+```
+
+### Build Process
+1. Jekyll reads `_config.yml`
+2. Processes markdown files and Liquid templates
+3. Generates static HTML in `_site/` directory
+4. GitHub Actions deploys `_site/` to GitHub Pages
+
+### File Processing
+- **Markdown**: `.md` files converted to HTML
+- **Liquid**: Template processing in layouts and includes
+- **Assets**: Copied to `_site/assets/`
+- **Collections**: Generated based on `_config.yml` settings
+
+## Theme Customization
+
+### Override Methods
+1. **Layouts**: Create `_layouts/` directory with custom layouts
+2. **Includes**: Create `_includes/` directory with custom includes
+3. **Assets**: Add custom CSS/JS to `assets/` directory
+4. **Data**: Override theme data files in `_data/`
+
+### Configuration
+- **Skin**: `minimal_mistakes_skin` in `_config.yml`
+- **Search**: `search: true` enables search functionality
+- **Breadcrumbs**: `breadcrumbs: true` enables breadcrumb navigation
+- **Navigation**: Configured via `_data/navigation.yml`
+
+## Important Constraints
+
+- **GitHub Pages compatibility**: All gems/plugins must be compatible
+- **No custom plugins**: Only whitelisted plugins work on GitHub Pages
+- **Theme gem**: Using theme gem ensures compatibility (vs remote theme)
+- **Build output**: `_site/` is generated; never edit directly
+- **Ruby version**: Must match `.ruby-version` for consistency
+
+## Security Considerations
+
+- **No server-side code**: Jekyll generates static files only
+- **No database**: All data is in files (`_data/`, frontmatter)
+- **GitHub Pages security**: Handled by GitHub infrastructure
+- **Dependencies**: Keep gems updated for security patches

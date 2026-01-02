@@ -1,0 +1,146 @@
+---
+description: Jekyll project directory structure and important files guide
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Jekyll Project Directory Structure
+
+This rule outlines the complete directory structure for a Jekyll static site.
+
+## Root Directory Structure
+
+```
+jekyll-root/
+├── .cursor/rules/           # Cursor IDE rules and guidelines
+├── _config.yml              # Jekyll configuration
+├── Gemfile                  # Ruby gem dependencies
+├── Gemfile.lock             # Locked dependency versions
+├── .ruby-version            # Ruby version for local + CI
+├── index.md                 # Homepage
+├── _products/               # Products collection
+│   └── *.md                 # Product pages
+├── _data/                   # Data files (YAML, JSON, CSV)
+│   └── navigation.yml       # Navigation data
+├── docs/                    # Documentation pages
+│   └── *.md                 # Documentation markdown files
+├── assets/                  # Static assets (images, CSS, JS)
+│   └── images/              # Image files
+├── _site/                   # Generated output (build artifact, gitignored)
+└── .github/workflows/       # GitHub Actions workflows
+    └── pages.yml            # Build & deploy workflow
+```
+
+## Key Directories
+
+### Collections (`_products/`)
+- **Purpose**: Organized content (products, blog posts, etc.)
+- **Structure**: Each file is a markdown file with frontmatter
+- **Configuration**: Defined in `_config.yml` under `collections:`
+- **Permalink**: Configured in `_config.yml` defaults section
+- **Example**: `_products/skool-downloader.md`
+
+### Data Files (`_data/`)
+- **Purpose**: Site-wide data accessible via Liquid templates
+- **Format**: YAML, JSON, or CSV
+- **Access**: `site.data.filename.key` in templates
+- **Example**: `_data/navigation.yml` → `site.data.navigation.main`
+
+### Documentation (`docs/`)
+- **Purpose**: Documentation pages
+- **Structure**: Markdown files that become pages
+- **Example**: `docs/faq.md` → `/docs/faq/`
+
+### Assets (`assets/`)
+- **Purpose**: Static files (images, custom CSS, JS)
+- **Structure**: Organized by type (images/, css/, js/)
+- **Access**: `/assets/images/file.jpg` in templates
+- **Note**: Theme assets are handled by the theme gem
+
+### Build Output (`_site/`)
+- **Purpose**: Generated static site (do not edit directly)
+- **Gitignored**: This directory is generated and should not be committed
+- **Deployment**: GitHub Actions deploys this directory
+
+## Key Files
+
+### `_config.yml`
+- Site configuration
+- Theme settings
+- Collection definitions
+- Default frontmatter
+- Plugin configuration
+- URL and permalink settings
+
+### `Gemfile`
+- Ruby gem dependencies
+- Theme gem (`minimal-mistakes-jekyll`)
+- GitHub Pages gem (`github-pages`)
+- Jekyll plugins
+
+### `index.md`
+- Homepage content
+- Uses `layout: single` or `layout: home`
+- Frontmatter defines page metadata
+
+### `.github/workflows/pages.yml`
+- GitHub Actions workflow
+- Builds Jekyll site
+- Deploys to GitHub Pages
+
+## File Naming Conventions
+
+### Markdown Files
+- Use kebab-case: `skool-downloader.md`, `faq.md`
+- Descriptive names that match content
+- Collection files go in collection directory (`_products/`, etc.)
+
+### Data Files
+- Use kebab-case: `navigation.yml`
+- Descriptive names matching data purpose
+- YAML format preferred for readability
+
+### Configuration
+- `_config.yml` - main configuration (YAML)
+- `.ruby-version` - Ruby version specification
+- `.gitignore` - ignored files (includes `_site/`)
+
+## Frontmatter Patterns
+
+### Page Frontmatter
+```yaml
+---
+layout: single
+title: Page Title
+permalink: /page-path/
+classes: wide
+---
+```
+
+### Collection Item Frontmatter
+```yaml
+---
+title: "Item Title"
+excerpt: "Short description"
+header:
+  teaser: /assets/images/teaser.jpg
+---
+```
+
+## Development Workflow
+
+1. **Content changes**: Edit markdown files in collections or root
+2. **Configuration changes**: Update `_config.yml` (affects entire site)
+3. **Data changes**: Update files in `_data/`
+4. **Asset changes**: Add/modify files in `assets/`
+5. **Local testing**: Run `bundle exec jekyll serve`
+6. **Deployment**: Push to `main` branch (GitHub Actions handles build/deploy)
+
+## Important Notes
+
+- **Never edit `_site/`**: This is generated output
+- **Collections require config**: Adding collections requires `_config.yml` updates
+- **Theme customization**: Override theme files by creating matching paths in `_includes/`, `_layouts/`, or `assets/`
+- **GitHub Pages compatibility**: Only use gems/plugins compatible with GitHub Pages
+- **Frontmatter required**: All markdown files need frontmatter (even if empty)
+- **Permalink structure**: Configured in `_config.yml` defaults section

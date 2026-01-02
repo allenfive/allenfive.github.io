@@ -1,0 +1,86 @@
+---
+description: Dependency and gem policy for Jekyll site
+globs: ["Gemfile", "Gemfile.lock", "_config.yml"]
+alwaysApply: false
+---
+
+# Dependency Policy
+
+## GitHub Pages Compatibility
+
+- **Whitelisted gems only**: Only gems compatible with GitHub Pages can be used
+- **Plugin restrictions**: Only whitelisted Jekyll plugins work on GitHub Pages
+- **Theme compatibility**: Theme gems must be compatible with GitHub Pages
+- **Check compatibility**: Verify gem works on GitHub Pages before adding
+
+## Gem Requirements
+
+- **Ruby compatibility**: Gems must be compatible with Ruby 3.3.x
+- **Jekyll compatibility**: Gems must work with Jekyll version used by `github-pages` gem
+- **No native extensions**: Avoid gems with native extensions that may fail on GitHub Pages
+- **License**: Ensure gem license is compatible with project needs
+
+## Dependency Justification
+
+For each new gem, record:
+
+- **Name**: Gem name
+- **Reason**: Why it's needed
+- **GitHub Pages compatibility**: Confirmation it works on GitHub Pages
+- **License**: License type
+- **Alternatives considered**: What alternatives were considered and why they don't work
+- **Version**: Specific version or version constraint
+
+## Separate Diffs
+
+- **Gemfile changes**: Show separate diff for `Gemfile`/`Gemfile.lock` changes
+- **Feature work**: Do not upgrade gems/tooling in same PR as feature work
+- **Review**: Dependency additions should be reviewed separately
+
+## Version Management
+
+- **Gemfile.lock**: Commit `Gemfile.lock` to ensure consistent builds
+- **Version constraints**: Use specific versions or conservative constraints
+- **Updates**: Update gems regularly for security patches
+- **Testing**: Test gem updates locally before committing
+
+## Current Dependencies
+
+### Core Gems
+- **github-pages**: Ensures GitHub Pages compatibility, includes Jekyll and plugins
+- **minimal-mistakes-jekyll**: Theme gem
+- **jekyll-include-cache**: Performance plugin
+
+### Dependency Management
+- **Bundler**: Ruby dependency manager
+- **Ruby version**: Specified in `.ruby-version` (3.3.x)
+
+## Best Practices
+
+- **Minimal dependencies**: Only add gems when necessary
+- **Theme gem**: Use theme gem instead of remote theme for better compatibility
+- **Local testing**: Always test locally with `bundle install` and `bundle exec jekyll serve`
+- **CI parity**: Ensure local and CI use same Ruby version and gems
+
+## Examples
+
+### ✅ Good Dependencies
+- GitHub Pages compatible gems
+- Theme gems (minimal-mistakes-jekyll)
+- Whitelisted Jekyll plugins (jekyll-include-cache)
+- Lightweight utility gems (if needed)
+
+### ❌ Avoid
+- Gems not compatible with GitHub Pages
+- Native extension gems (may fail on GitHub Pages)
+- Heavy dependencies for small features
+- Gems requiring custom build processes
+
+## Adding a New Gem
+
+1. **Check compatibility**: Verify gem works on GitHub Pages
+2. **Add to Gemfile**: Add gem with version constraint
+3. **Update lockfile**: Run `bundle install` to update `Gemfile.lock`
+4. **Test locally**: Run `bundle exec jekyll serve` to verify it works
+5. **Document**: Add justification in PR description
+6. **Separate PR**: Consider separate PR for dependency changes vs feature work

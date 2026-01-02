@@ -7,3 +7,34 @@ theme: minimal-mistakes-jekyll
 
 plugins:
   - jekyll-include-cache
+
+# Basic identity
+title: AllenFive
+description: Chrome extension products
+url: "https://allenfive.github.io"
+baseurl: ""
+
+# Theme + plugins (you already have these)
+theme: minimal-mistakes-jekyll
+plugins:
+  - jekyll-include-cache
+
+# Theme look & behavior
+minimal_mistakes_skin: "default"   # try: "dark", "air", "contrast", "neon", "mint"
+search: true
+breadcrumbs: true
+# paginate: 5
+# paginate_path: /page:num/
+
+
+collections:
+  products:
+    output: true
+    permalink: /products/:path/
+defaults:
+  - scope:
+      path: ""
+      type: products
+    values:
+      layout: single
+      classes: wide

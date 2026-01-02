@@ -1,0 +1,22 @@
+---
+description: Avoid overlap with existing rule cards from the team.
+---
+
+# Rule Card Interop
+
+- When editing project structure or dependencies, consult:
+  - `.cursor/rules/project-structure.mdc`
+  - `.cursor/rules/tech-stack.mdc`
+  - `.cursor/rules/dependency-policy.mdc`
+- When changing Jekyll configuration or collections, consult:
+  - `.cursor/rules/project-structure.mdc`
+  - `.cursor/rules/multi-file-change-protocol.mdc`
+- When modifying content or frontmatter, consult:
+  - `.cursor/rules/project-structure.mdc`
+  - `.cursor/rules/tech-stack.mdc`
+- When making multi-file changes, consult:
+  - `.cursor/rules/multi-file-change-protocol.mdc`
+- For refactors or recurring bug patterns, consult:
+  - `.cursor/rules/self-improve.mdc`
+
+If guidance conflicts, prefer the **Coding Guardrails** and ask for clarification before proceeding.

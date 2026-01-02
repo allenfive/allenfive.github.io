@@ -1,0 +1,41 @@
+---
+description: Core, high-signal AI guardrails for editing an existing production codebase
+alwaysApply: true
+---
+
+# Coding Guardrails (Minimal-Diff Mode)
+
+## Jekyll-Specific Considerations
+
+### Frontmatter Handling
+- **Valid YAML**: Ensure frontmatter is valid YAML syntax
+- **Required fields**: Preserve required frontmatter fields (layout, title, permalink, etc.)
+- **Consistent format**: Follow existing frontmatter patterns in the codebase
+- **Collections**: When adding collection items, ensure proper frontmatter structure
+
+### Liquid Templates
+- **Safe navigation**: Use safe navigation operators when accessing nested data
+- **Performance**: Avoid complex Liquid logic in templates; prefer data preprocessing
+- **Escaping**: Properly escape user-generated content in Liquid templates
+
+### Configuration Changes
+- **`_config.yml`**: Changes to `_config.yml` affect the entire site; test thoroughly
+- **Collections**: Adding/modifying collections requires updates to `_config.yml` and potentially multiple files
+- **Data files**: Changes to `_data/` files affect all pages using that data
+
+### Build and Deployment
+- **Local testing**: Always test locally with `bundle exec jekyll serve` before committing
+- **GitHub Pages compatibility**: Ensure gems and plugins are compatible with GitHub Pages
+- **Build output**: Never edit `_site/` directory directly (it's generated)
+
+## General Guardrails
+
+- **Plan first for multi-file tasks**: Before editing, propose a numbered plan that lists exact file paths and functions to change (max 4 files). *Wait for approval*.
+- **Minimal diffs**: Make the smallest possible changes to pass tests or meet the stated goal. Do **not** rewrite files or refactor unrelated code.
+- **Do not invent** paths, environment variables, config keys, or types. If something is unknown, ask for the exact file and line.
+- **Preserve interfaces**: Public APIs, exported types, and configuration must remain stable unless explicitly approved.
+- **Keep error handling consistent**: Use the shared helper and logging patterns established in the repo.
+- **Dependency discipline**: If you add a gem, list name, reason, license, and patch `Gemfile` in a separate diff. Avoid large dependency changes. Ensure GitHub Pages compatibility.
+- **Docs**: If you change site structure, collections, or configuration, update relevant docs in the same PR.
+- **Collections**: If you add/modify collections, update `_config.yml` and follow `.cursor/rules/multi-file-change-protocol.mdc`.
+- **Data files**: If you modify `_data/` files, consider impact on all pages using that data.
