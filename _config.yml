@@ -1,20 +1,14 @@
-title: AllenFive
-description: Chrome extension products
-url: ""
-baseurl: ""
-
-theme: minimal-mistakes-jekyll
-
-plugins:
-  - jekyll-include-cache
-
 # Basic identity
-title: AllenFive
-description: Chrome extension products
-url: "https://allenfive.github.io"
+title: A5 Productivity Tools
+masthead_title: A5 Productivity Tools
+description: Productivity tools - Chrome extensions and custom development solutions
+url: "https://allenfive.com"
 baseurl: ""
 
-# Theme + plugins (you already have these)
+# Logo configuration
+logo: /assets/images/logo-a5.png
+
+# Theme + plugins
 theme: minimal-mistakes-jekyll
 plugins:
   - jekyll-include-cache
@@ -26,11 +20,29 @@ breadcrumbs: true
 # paginate: 5
 # paginate_path: /page:num/
 
+# Footer configuration
+footer:
+  links:
+    - label: "Privacy"
+      url: /docs/privacy/
+    - label: "Terms"
+      url: /terms/
+    - label: "DMCA"
+      url: /docs/dmca/
+    - label: "Contact"
+      url: mailto:sales@allenfive.com
 
+# Disable RSS feed link in footer
+atom_feed:
+  hide: true
+
+# Collections
 collections:
   products:
     output: true
     permalink: /products/:path/
+
+# Defaults
 defaults:
   - scope:
       path: ""
