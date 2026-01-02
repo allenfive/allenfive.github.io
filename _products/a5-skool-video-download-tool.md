@@ -1,5 +1,6 @@
 ---
 title: "A5 Skool Video Download Tool"
+description: "Download course videos from Skool platforms as MP4 files. Chrome extension for offline viewing and content backup. One-click download with fast processing."
 excerpt: "Download course videos from Skool and save MP4 files locally."
 permalink: /products/a5-skool-video-download-tool/
 header:

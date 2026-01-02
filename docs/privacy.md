@@ -1,6 +1,7 @@
 ---
 layout: single
 title: Privacy Policy
+description: "Privacy Policy for A5 Productivity Tools - Learn how we collect, use, and protect your information when using our website and browser extensions."
 permalink: /docs/privacy/
 ---
 

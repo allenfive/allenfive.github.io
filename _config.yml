@@ -5,6 +5,25 @@ description: Productivity tools - Chrome extensions and custom development solut
 url: "https://allenfive.com"
 baseurl: ""
 
+# Language & Locale
+lang: en
+locale: en-US
+
+# Author
+author:
+  name: "A5 Productivity Tools"
+  email: sales@allenfive.com
+
+# SEO & Social
+site:
+  logo: /assets/images/logo-a5.png
+  og_image: /assets/images/logo-a5.png
+
+# Twitter (add username if you have one)
+twitter:
+  username: # Add your Twitter username here if applicable
+  card: summary_large_image
+
 # Logo configuration
 logo: /assets/images/logo-a5.png
 

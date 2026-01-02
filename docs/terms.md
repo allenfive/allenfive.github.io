@@ -1,6 +1,7 @@
 ---
 layout: single
 title: Terms of Use
+description: "Terms of Service for A5 Productivity Tools - Read our terms of use, license agreements, refund policy, and acceptable use guidelines."
 permalink: /terms/
 ---
 

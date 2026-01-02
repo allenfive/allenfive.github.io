@@ -1,6 +1,7 @@
 ---
 layout: single
 title: DMCA Policy & Designated Agent
+description: "DMCA Policy for A5 Productivity Tools - Learn how to submit copyright infringement notices and counter-notifications."
 permalink: /docs/dmca/
 ---
 
