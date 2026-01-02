@@ -1,0 +1,9 @@
+title: AllenFive
+description: Chrome extension products
+url: ""
+baseurl: ""
+
+theme: minimal-mistakes-jekyll
+
+plugins:
+  - jekyll-include-cache
