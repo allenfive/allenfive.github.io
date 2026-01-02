@@ -25,10 +25,16 @@ We also offer custom development services for anything from Chrome extensions, t
 ## Current Products
 {% for product in site.products limit:3 %}
   <div style="margin-bottom: 2em; padding: 1.5em; background: #f8f9fa; border-radius: 8px;">
-    <h2><a href="{{ product.url }}">{{ product.title }}</a></h2>
+    <div style="display: flex; align-items: center; gap: 1em; margin-bottom: 0.5em;">
+      {% if product.url contains 'a5-skool-video-download-tool' %}
+        <img src="/assets/images/skool-downloader-icon-128.png" alt="{{ product.title }} Icon" style="width: 48px; height: 48px; flex-shrink: 0;">
+      {% endif %}
+      <h2 style="margin: 0;"><a href="{{ product.url }}">{{ product.title }}</a></h2>
+    </div>
+    <!-- keeping this here for a later implementation
     {% if product.header.teaser %}
       <img src="{{ product.header.teaser }}" alt="{{ product.title }} - {{ product.excerpt | strip_html | truncate: 100 }}" style="max-width: 100%; height: auto; margin: 1em 0; border-radius: 4px;">
-    {% endif %}
+    {% endif %} -->
     <p>{{ product.excerpt }}</p>
     <p><a href="{{ product.url }}" class="btn btn--primary">Learn More</a></p>
   </div>

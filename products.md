@@ -18,9 +18,9 @@ Check out some of the publicly available productivity tools we've built ... with
       {% endif %}
       <h2 style="margin: 0;"><a href="{{ product.url }}">{{ product.title }}</a></h2>
     </div>
-    {% if product.header.teaser %}
+    <!-- {% if product.header.teaser %}
       <img src="{{ product.header.teaser }}" alt="{{ product.title }} - {{ product.excerpt | strip_html | truncate: 100 }}" style="max-width: 100%; height: auto; margin: 1em 0; border-radius: 4px;">
-    {% endif %}
+    {% endif %} -->
     <p>{{ product.excerpt }}</p>
     <p><a href="{{ product.url }}" class="btn btn--primary">Learn More</a></p>
   </div>
