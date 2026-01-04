@@ -48,6 +48,8 @@ footer:
       url: /terms/
     - label: "DMCA"
       url: /docs/dmca/
+    - label: "Refunds"
+      url: /docs/refund/
     - label: "Contact"
       url: mailto:sales@allenfive.com
 

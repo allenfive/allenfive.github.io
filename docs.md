@@ -8,3 +8,4 @@ permalink: /docs/
 - [Privacy Policy](/docs/privacy/)
 - [Terms of Use](/terms/)
 - [DMCA](/docs/dmca/)
+- [Refunds](/docs/refund/)
