@@ -27,7 +27,7 @@ The A5 Skool Video Download Tool is a Chrome extension that allows you to downlo
 
 1. Install the A5 Skool Video Download Tool extension from the Chrome Web Store
 2. Navigate to any Skool course page with video content
-3. Click the download button that appears on video pages
+3. Click the extension and choose the download option
 4. The video is processed and downloaded as an MP4 file to your default download folder
 5. Enjoy your videos offline anytime
 
