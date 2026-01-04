@@ -33,28 +33,14 @@ The A5 Skool Video Download Tool is a Chrome extension that allows you to downlo
 
 ## Pricing
 
-<div style="background: #f8f9fa; border: 2px solid #2563eb; border-radius: 8px; padding: 2em; margin: 2em 0; text-align: center;">
-  <div style="font-size: 2.5em; font-weight: bold; color: #2563eb; margin-bottom: 0.5em;">$24 USD</div>
-  <div style="font-size: 1.2em; color: #666; margin-bottom: 1.5em;">One-time license</div>
-  
-  <ul style="list-style: none; padding: 0; margin: 1.5em 0; text-align: left; max-width: 400px; margin-left: auto; margin-right: auto;">
-    <li style="padding: 0.5em 0; border-bottom: 1px solid #e0e0e0;">
-      <strong>✓</strong> One-time license
-    </li>
-    <li style="padding: 0.5em 0; border-bottom: 1px solid #e0e0e0;">
-      <strong>✓</strong> No subscription
-    </li>
-    <li style="padding: 0.5em 0; border-bottom: 1px solid #e0e0e0;">
-      <strong>✓</strong> Email-based activation via Paddle
-    </li>
-    <li style="padding: 0.5em 0;">
-      <strong>✓</strong> Includes future updates
-    </li>
-  </ul>
-  
-  <a href="#" class="btn btn--primary" style="font-size: 1.2em; padding: 0.75em 2em; margin-top: 1em; pointer-events: none; opacity: 0.7; cursor: not-allowed;" onclick="return false;">Buy Now (Coming Soon)</a>
-  <p style="margin-top: 0.5em; font-size: 0.9em; color: #999;">Checkout via Paddle - Coming soon</p>
-</div>
+**$24 USD** - One-time license
+
+- **One-time license**: No recurring charges
+- **No subscription**: Pay once and own it forever
+- **Email-based activation**: License key delivered via email through Paddle
+- **Includes future updates**: All updates included at no additional cost
+
+[Buy Now](https://paddle.com) *(Coming Soon - Checkout via Paddle)*
 
 ## Support & Contact
 
