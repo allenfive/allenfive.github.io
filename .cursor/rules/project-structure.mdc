@@ -136,9 +136,7 @@ header:
 5. **Local testing**: Run `bundle exec jekyll serve`
 6. **Deployment**: Push to `main` branch (GitHub Actions handles build/deploy)
 
-## Important Notes
-
-- **Never edit `_site/`**: This is generated output
+## Important Notes- **Never edit `_site/`**: This is generated output
 - **Collections require config**: Adding collections requires `_config.yml` updates
 - **Theme customization**: Override theme files by creating matching paths in `_includes/`, `_layouts/`, or `assets/`
 - **GitHub Pages compatibility**: Only use gems/plugins compatible with GitHub Pages
