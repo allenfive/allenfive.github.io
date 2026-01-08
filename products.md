@@ -11,6 +11,7 @@ classes: wide
 Check out some of the publicly available productivity tools we've built ... with more products coming soon!
 
 {% for product in site.products %}
+  {% if product.published != false %}
   <div class="product-card" style="margin-bottom: 2em; padding: 1.5em; border: 1px solid #e0e0e0; border-radius: 8px;">
     <div style="display: flex; align-items: center; gap: 1em; margin-bottom: 0.5em;">
       {% if product.url contains 'a5-skool-video-download-tool' %}
@@ -26,4 +27,5 @@ Check out some of the publicly available productivity tools we've built ... with
     <p>{{ product.excerpt }}</p>
     <p><a href="{{ product.url }}" class="btn btn--primary">Learn More</a></p>
   </div>
+  {% endif %}
 {% endfor %}

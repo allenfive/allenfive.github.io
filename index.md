@@ -24,6 +24,7 @@ We also offer custom development services for anything from Chrome extensions, t
 
 ## Current Products
 {% for product in site.products limit:3 %}
+  {% if product.published != false %}
   <div style="margin-bottom: 2em; padding: 1.5em; background: #f8f9fa; border-radius: 8px;">
     <div style="display: flex; align-items: center; gap: 1em; margin-bottom: 0.5em;">
       {% if product.url contains 'a5-skool-video-download-tool' %}
@@ -40,6 +41,7 @@ We also offer custom development services for anything from Chrome extensions, t
     <p>{{ product.excerpt }}</p>
     <p><a href="{{ product.url }}" class="btn btn--primary">Learn More</a></p>
   </div>
+  {% endif %}
 {% endfor %}
 
 ---

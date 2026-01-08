@@ -3,6 +3,7 @@ title: "Coin Collector Assistant - by A5"
 description: "Save eBay coin listing snapshots, build your collection library, and export to CSV. Free tier: 10 snapshots. Pro: unlimited + CSV export."
 excerpt: "Save eBay coin listing snapshots, build your collection library, and export to CSV."
 permalink: /products/coin-collector-assistant/
+published: true
 ---
 
 <div style="float: left; margin-right: 1em; margin-top: 0.5em;">
