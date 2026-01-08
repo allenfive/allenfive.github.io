@@ -28,6 +28,8 @@ We also offer custom development services for anything from Chrome extensions, t
     <div style="display: flex; align-items: center; gap: 1em; margin-bottom: 0.5em;">
       {% if product.url contains 'a5-skool-video-download-tool' %}
         <img src="/assets/images/skool-downloader-icon-128.png" alt="{{ product.title }} Icon" style="width: 48px; height: 48px; flex-shrink: 0;">
+      {% elsif product.url contains 'coin-collector-assistant' %}
+        <img src="/assets/images/coin-collector-assistant-128.png" alt="{{ product.title }} Icon" style="width: 48px; height: 48px; flex-shrink: 0;">
       {% endif %}
       <h2 style="margin: 0;"><a href="{{ product.url }}">{{ product.title }}</a></h2>
     </div>
