@@ -17,7 +17,7 @@ Coin Collector Assistant - by A5 is a Chrome extension that helps you save eBay 
 
 - **Save eBay snapshots**: Capture and save coin listing information from eBay
 - **Build collection library**: Organize your coin collection in one place
-- **CSV export**: Export your collection data to CSV format (Pro feature)
+- **CSV export**: Export your collection data to CSV format
 - **Free tier**: Get started with 10 snapshots at no cost
 - **Pro tier**: Unlimited snapshots plus CSV export capability
 - **Simple interface**: Clean, intuitive Chrome extension interface
@@ -40,7 +40,7 @@ Coin Collector Assistant - by A5 is a Chrome extension that helps you save eBay 
 - **CSV export**: Export your collection data to CSV format
 - **One-time license**: No recurring charges
 - **No subscription**: Pay once and own it forever
-- **Email-based activation**: License key delivered via email through Paddle
+- **Email-based activation**: License key delivered via email
 - **Includes future updates**: All updates included at no additional cost
 
 [Buy Now](https://paddle.com) *(Coming Soon - Checkout via Paddle)*

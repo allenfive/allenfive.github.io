@@ -37,7 +37,7 @@ The A5 Skool Video Download Tool is a Chrome extension that allows you to downlo
 
 - **One-time license**: No recurring charges
 - **No subscription**: Pay once and own it forever
-- **Email-based activation**: License key delivered via email through Paddle
+- **Email-based activation**: License key delivered via email
 - **Includes future updates**: All updates included at no additional cost
 
 [Buy Now](https://paddle.com) *(Coming Soon - Checkout via Paddle)*
