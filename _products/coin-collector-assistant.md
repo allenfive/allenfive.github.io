@@ -32,8 +32,12 @@ Coin Collector Assistant - by A5 is a Chrome extension that helps you save eBay 
 
 ## Pricing
 
-**$24 USD** - One-time license
+**Free Tier** - Get started with 10 snapshots at no cost
 
+**Pro Tier** - **$19 USD** - One-time license
+
+- **Unlimited snapshots**: Save as many coin listing snapshots as you need
+- **CSV export**: Export your collection data to CSV format
 - **One-time license**: No recurring charges
 - **No subscription**: Pay once and own it forever
 - **Email-based activation**: License key delivered via email through Paddle
