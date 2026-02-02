@@ -3,7 +3,7 @@ title: "A5 Skool Video Download Tool"
 description: "Download course videos from Skool platforms as MP4 files. Chrome extension for offline viewing and content backup. One-click download with fast processing."
 excerpt: "Download course videos from Skool and save MP4 files locally."
 permalink: /products/a5-skool-video-download-tool/
-published: false
+published: true
 header:
   teaser: /assets/images/product-a5-skool.jpg
 ---
@@ -32,9 +32,13 @@ The A5 Skool Video Download Tool is a Chrome extension that allows you to downlo
 4. The video is processed and downloaded as an MP4 file to your default download folder
 5. Enjoy your videos offline anytime
 
+## Notes
+
+- Due to restrictions, this will **not** work with YouTube videos
+
 ## Pricing
 
-**$24 USD** - One-time license
+**$25 USD** - One-time license
 
 - **One-time license**: No recurring charges
 - **No subscription**: Pay once and own it forever
