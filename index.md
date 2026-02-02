@@ -41,7 +41,7 @@ We also offer custom development services for anything from Chrome extensions, t
       <img src="{{ product.header.teaser }}" alt="{{ product.title }} - {{ product.excerpt | strip_html | truncate: 100 }}" style="max-width: 100%; height: auto; margin: 1em 0; border-radius: 4px;">
     {% endif %} -->
     <p>{{ product.excerpt }}</p>
-    <p><a href="{{ product.url }}" class="btn btn--primary">Learn More</a></p>
+    <!-- <p><a href="{{ product.url }}" class="btn btn--primary">Learn More</a></p> -->
   </div>
   {% endif %}
 {% endfor %}
