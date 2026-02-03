@@ -33,6 +33,8 @@ We also offer custom development services for anything from Chrome extensions, t
         <img src="/assets/images/coin-collector-assistant-128.png" alt="{{ product.title }} Icon" style="width: 48px; height: 48px; flex-shrink: 0;">
       {% elsif product.url contains 'trading-card-collector-assistant' %}
         <img src="/assets/images/trading-card-collector-assistant-128.png" alt="{{ product.title }} Icon" style="width: 48px; height: 48px; flex-shrink: 0;">
+      {% elsif product.url contains 'buy-me-a-coffee' %}
+        <img src="/assets/images/logo-a5.png" alt="{{ product.title }} Icon" style="width: 48px; height: 48px; flex-shrink: 0;">
       {% elsif product.url contains 'vibe-coding-detector' %}
         <img src="/assets/images/vibe-coding-detector-128.png" alt="{{ product.title }} Icon" style="width: 48px; height: 48px; flex-shrink: 0;">
       {% endif %}

@@ -25,7 +25,7 @@ Trading Card Collector Assistant - by A5 is a Chrome extension that helps you sa
 
 ## How It Works
 
-1. Install the Trading Card Collector Assistant extension from the Chrome Web Store
+1. Install the Trading Card Collector Assistant extension from the [Chrome Web Store](https://chromewebstore.google.com/detail/trading-card-collector-as/khdgbenlpmhelijcikaidhkmppbbcnmo)
 2. Navigate to any eBay trading card listing page
 3. Click the extension to capture the listing snapshot
 4. Build your collection library by saving snapshots

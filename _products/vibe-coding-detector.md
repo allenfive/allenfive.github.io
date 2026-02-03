@@ -37,13 +37,16 @@ Built for developers, researchers, and curious builders who want explainable res
 
 ## Pricing
 
-**Free** - No cost to use
+**Free** - [but donations are welcomed!](/products/buy-me-a-coffee/)
 
 - **Unlimited analyses**: Analyze as many pages as you want
 - **All features included**: No gated functionality
 - **No accounts required**: Works immediately after install
 - **No subscriptions**: Completely free to use
 - **Privacy-first**: No data collection or tracking
+
+If you would like to support development, please visit the donations page:
+[Buy Me a Coffee](/products/buy-me-a-coffee/)
 
 ## Support & Contact
 
