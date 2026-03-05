@@ -45,7 +45,7 @@ The Skool Video Download Tool is a Chrome extension that allows you to download 
 - **Email-based activation**: License key delivered via email
 - **Includes future updates**: All updates included at no additional cost
 
-[Buy Now](https://paddle.com) *(Coming Soon - Checkout via Paddle)*
+[Buy Now](https://allenfive.gumroad.com/l/skool-video-download-tools-by-a5)
 
 ## Support & Contact
 
